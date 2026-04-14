@@ -28,3 +28,4 @@ To join the mailing list, please fill out the following form: https://forms.gle/
 
 
 We appreciate your interest and support in ASTRA-sim!
+# astra-sim
