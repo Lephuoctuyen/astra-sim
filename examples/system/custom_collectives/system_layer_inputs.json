@@ -1,0 +1,148 @@
+{
+  "workload_name": "HYBRID_DLRM",
+  "num_groups": 4,
+  "num_npus": 8,
+  "algorithm_policy": {
+    "ALLREDUCE": "ring",
+    "ALLTOALL": "pairwise"
+  },
+  "collectives": [
+    {
+      "node_name": "Embedding_fwd_comm",
+      "layer": "Embedding",
+      "phase": "fwd",
+      "comm_type": "ALLTOALL",
+      "comm_size": 98304,
+      "algorithm": "pairwise",
+      "algorithm_key": "alltoall_pairwise_8ranks_98304"
+    },
+    {
+      "node_name": "MLP_Top_2_wgrad_comm",
+      "layer": "MLP_Top_2",
+      "phase": "wgrad",
+      "comm_type": "ALLREDUCE",
+      "comm_size": 524288,
+      "algorithm": "ring",
+      "algorithm_key": "allreduce_ring_8ranks_524288"
+    },
+    {
+      "node_name": "MLP_Top_1_wgrad_comm",
+      "layer": "MLP_Top_1",
+      "phase": "wgrad",
+      "comm_type": "ALLREDUCE",
+      "comm_size": 524288,
+      "algorithm": "ring",
+      "algorithm_key": "allreduce_ring_8ranks_524288"
+    },
+    {
+      "node_name": "MLP_Top_0_wgrad_comm",
+      "layer": "MLP_Top_0",
+      "phase": "wgrad",
+      "comm_type": "ALLREDUCE",
+      "comm_size": 1064960,
+      "algorithm": "ring",
+      "algorithm_key": "allreduce_ring_8ranks_1064960"
+    },
+    {
+      "node_name": "MLP_Bottom_3_wgrad_comm",
+      "layer": "MLP_Bottom_3",
+      "phase": "wgrad",
+      "comm_type": "ALLREDUCE",
+      "comm_size": 16384,
+      "algorithm": "ring",
+      "algorithm_key": "allreduce_ring_8ranks_16384"
+    },
+    {
+      "node_name": "MLP_Bottom_2_wgrad_comm",
+      "layer": "MLP_Bottom_2",
+      "phase": "wgrad",
+      "comm_type": "ALLREDUCE",
+      "comm_size": 524288,
+      "algorithm": "ring",
+      "algorithm_key": "allreduce_ring_8ranks_524288"
+    },
+    {
+      "node_name": "MLP_Bottom_1_wgrad_comm",
+      "layer": "MLP_Bottom_1",
+      "phase": "wgrad",
+      "comm_type": "ALLREDUCE",
+      "comm_size": 524288,
+      "algorithm": "ring",
+      "algorithm_key": "allreduce_ring_8ranks_524288"
+    },
+    {
+      "node_name": "MLP_Bottom_0_wgrad_comm",
+      "layer": "MLP_Bottom_0",
+      "phase": "wgrad",
+      "comm_type": "ALLREDUCE",
+      "comm_size": 13312,
+      "algorithm": "ring",
+      "algorithm_key": "allreduce_ring_8ranks_13312"
+    },
+    {
+      "node_name": "Embedding_bwd_comm",
+      "layer": "Embedding",
+      "phase": "bwd",
+      "comm_type": "ALLTOALL",
+      "comm_size": 98304,
+      "algorithm": "pairwise",
+      "algorithm_key": "alltoall_pairwise_8ranks_98304"
+    }
+  ],
+  "artifacts": [
+    {
+      "algorithm_key": "alltoall_pairwise_8ranks_98304",
+      "comm_type": "ALLTOALL",
+      "comm_size": 98304,
+      "algorithm": "pairwise",
+      "num_npus": 8,
+      "users": [
+        "Embedding_fwd_comm",
+        "Embedding_bwd_comm"
+      ]
+    },
+    {
+      "algorithm_key": "allreduce_ring_8ranks_524288",
+      "comm_type": "ALLREDUCE",
+      "comm_size": 524288,
+      "algorithm": "ring",
+      "num_npus": 8,
+      "users": [
+        "MLP_Top_2_wgrad_comm",
+        "MLP_Top_1_wgrad_comm",
+        "MLP_Bottom_2_wgrad_comm",
+        "MLP_Bottom_1_wgrad_comm"
+      ]
+    },
+    {
+      "algorithm_key": "allreduce_ring_8ranks_1064960",
+      "comm_type": "ALLREDUCE",
+      "comm_size": 1064960,
+      "algorithm": "ring",
+      "num_npus": 8,
+      "users": [
+        "MLP_Top_0_wgrad_comm"
+      ]
+    },
+    {
+      "algorithm_key": "allreduce_ring_8ranks_16384",
+      "comm_type": "ALLREDUCE",
+      "comm_size": 16384,
+      "algorithm": "ring",
+      "num_npus": 8,
+      "users": [
+        "MLP_Bottom_3_wgrad_comm"
+      ]
+    },
+    {
+      "algorithm_key": "allreduce_ring_8ranks_13312",
+      "comm_type": "ALLREDUCE",
+      "comm_size": 13312,
+      "algorithm": "ring",
+      "num_npus": 8,
+      "users": [
+        "MLP_Bottom_0_wgrad_comm"
+      ]
+    }
+  ]
+}

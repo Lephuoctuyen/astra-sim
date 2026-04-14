@@ -1,0 +1,12 @@
+=== GlobalMetadata ===
+version: 0.0.4
+
+=== Node #0 ===
+name: all_reduce_16npus_1MB
+type: 7
+attributes:
+  - is_cpu_op: False
+  - comm_type: 0
+  - comm_size: 1048576
+
+Đọc xong 1 node.

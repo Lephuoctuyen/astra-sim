@@ -1,0 +1,1685 @@
+{
+  "attr": [
+    {
+      "name": "schema",
+      "stringVal": "1.0.2-chakra.0.0.4"
+    },
+    {
+      "name": "input_file",
+      "stringVal": "<algo name=\"allreduce_ring_1channelsperring\" proto=\"LL128\" nchannels=\"1\" nchunksperloop=\"8\" ngpus=\"8\" coll=\"allreduce\" inplace=\"1\">\n  <gpu id=\"0\" i_chunks=\"8\" o_chunks=\"0\" s_chunks=\"0\">\n    <tb id=\"0\" send=\"1\" recv=\"7\" chan=\"0\">\n      <step s=\"0\" type=\"s\" srcbuf=\"i\" srcoff=\"0\" dstbuf=\"i\" dstoff=\"0\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"1\" type=\"rrc\" srcbuf=\"i\" srcoff=\"7\" dstbuf=\"i\" dstoff=\"7\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"2\" type=\"s\" srcbuf=\"i\" srcoff=\"7\" dstbuf=\"i\" dstoff=\"7\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"3\" type=\"rrc\" srcbuf=\"i\" srcoff=\"6\" dstbuf=\"i\" dstoff=\"6\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"4\" type=\"s\" srcbuf=\"i\" srcoff=\"6\" dstbuf=\"i\" dstoff=\"6\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"5\" type=\"rrc\" srcbuf=\"i\" srcoff=\"5\" dstbuf=\"i\" dstoff=\"5\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"6\" type=\"s\" srcbuf=\"i\" srcoff=\"5\" dstbuf=\"i\" dstoff=\"5\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"7\" type=\"rrc\" srcbuf=\"i\" srcoff=\"4\" dstbuf=\"i\" dstoff=\"4\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"8\" type=\"s\" srcbuf=\"i\" srcoff=\"4\" dstbuf=\"i\" dstoff=\"4\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"9\" type=\"rrc\" srcbuf=\"i\" srcoff=\"3\" dstbuf=\"i\" dstoff=\"3\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"10\" type=\"s\" srcbuf=\"i\" srcoff=\"3\" dstbuf=\"i\" dstoff=\"3\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"11\" type=\"rrc\" srcbuf=\"i\" srcoff=\"2\" dstbuf=\"i\" dstoff=\"2\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"12\" type=\"s\" srcbuf=\"i\" srcoff=\"2\" dstbuf=\"i\" dstoff=\"2\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"13\" type=\"rrc\" srcbuf=\"i\" srcoff=\"1\" dstbuf=\"i\" dstoff=\"1\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"14\" type=\"s\" srcbuf=\"i\" srcoff=\"1\" dstbuf=\"i\" dstoff=\"1\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"15\" type=\"r\" srcbuf=\"i\" srcoff=\"0\" dstbuf=\"i\" dstoff=\"0\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"16\" type=\"s\" srcbuf=\"i\" srcoff=\"0\" dstbuf=\"i\" dstoff=\"0\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"17\" type=\"r\" srcbuf=\"i\" srcoff=\"7\" dstbuf=\"i\" dstoff=\"7\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"18\" type=\"s\" srcbuf=\"i\" srcoff=\"7\" dstbuf=\"i\" dstoff=\"7\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"19\" type=\"r\" srcbuf=\"i\" srcoff=\"6\" dstbuf=\"i\" dstoff=\"6\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"20\" type=\"s\" srcbuf=\"i\" srcoff=\"6\" dstbuf=\"i\" dstoff=\"6\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"21\" type=\"r\" srcbuf=\"i\" srcoff=\"5\" dstbuf=\"i\" dstoff=\"5\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"22\" type=\"s\" srcbuf=\"i\" srcoff=\"5\" dstbuf=\"i\" dstoff=\"5\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"23\" type=\"r\" srcbuf=\"i\" srcoff=\"4\" dstbuf=\"i\" dstoff=\"4\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"24\" type=\"s\" srcbuf=\"i\" srcoff=\"4\" dstbuf=\"i\" dstoff=\"4\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"25\" type=\"r\" srcbuf=\"i\" srcoff=\"3\" dstbuf=\"i\" dstoff=\"3\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"26\" type=\"s\" srcbuf=\"i\" srcoff=\"3\" dstbuf=\"i\" dstoff=\"3\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"27\" type=\"r\" srcbuf=\"i\" srcoff=\"2\" dstbuf=\"i\" dstoff=\"2\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n    </tb>\n  </gpu>\n  <gpu id=\"1\" i_chunks=\"8\" o_chunks=\"0\" s_chunks=\"0\">\n    <tb id=\"0\" send=\"2\" recv=\"0\" chan=\"0\">\n      <step s=\"0\" type=\"s\" srcbuf=\"i\" srcoff=\"1\" dstbuf=\"i\" dstoff=\"1\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"1\" type=\"rrc\" srcbuf=\"i\" srcoff=\"0\" dstbuf=\"i\" dstoff=\"0\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"2\" type=\"s\" srcbuf=\"i\" srcoff=\"0\" dstbuf=\"i\" dstoff=\"0\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"3\" type=\"rrc\" srcbuf=\"i\" srcoff=\"7\" dstbuf=\"i\" dstoff=\"7\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"4\" type=\"s\" srcbuf=\"i\" srcoff=\"7\" dstbuf=\"i\" dstoff=\"7\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"5\" type=\"rrc\" srcbuf=\"i\" srcoff=\"6\" dstbuf=\"i\" dstoff=\"6\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"6\" type=\"s\" srcbuf=\"i\" srcoff=\"6\" dstbuf=\"i\" dstoff=\"6\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"7\" type=\"rrc\" srcbuf=\"i\" srcoff=\"5\" dstbuf=\"i\" dstoff=\"5\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"8\" type=\"s\" srcbuf=\"i\" srcoff=\"5\" dstbuf=\"i\" dstoff=\"5\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"9\" type=\"rrc\" srcbuf=\"i\" srcoff=\"4\" dstbuf=\"i\" dstoff=\"4\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"10\" type=\"s\" srcbuf=\"i\" srcoff=\"4\" dstbuf=\"i\" dstoff=\"4\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"11\" type=\"rrc\" srcbuf=\"i\" srcoff=\"3\" dstbuf=\"i\" dstoff=\"3\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"12\" type=\"s\" srcbuf=\"i\" srcoff=\"3\" dstbuf=\"i\" dstoff=\"3\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"13\" type=\"rrc\" srcbuf=\"i\" srcoff=\"2\" dstbuf=\"i\" dstoff=\"2\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"14\" type=\"s\" srcbuf=\"i\" srcoff=\"2\" dstbuf=\"i\" dstoff=\"2\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"15\" type=\"r\" srcbuf=\"i\" srcoff=\"1\" dstbuf=\"i\" dstoff=\"1\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"16\" type=\"s\" srcbuf=\"i\" srcoff=\"1\" dstbuf=\"i\" dstoff=\"1\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"17\" type=\"r\" srcbuf=\"i\" srcoff=\"0\" dstbuf=\"i\" dstoff=\"0\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"18\" type=\"s\" srcbuf=\"i\" srcoff=\"0\" dstbuf=\"i\" dstoff=\"0\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"19\" type=\"r\" srcbuf=\"i\" srcoff=\"7\" dstbuf=\"i\" dstoff=\"7\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"20\" type=\"s\" srcbuf=\"i\" srcoff=\"7\" dstbuf=\"i\" dstoff=\"7\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"21\" type=\"r\" srcbuf=\"i\" srcoff=\"6\" dstbuf=\"i\" dstoff=\"6\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"22\" type=\"s\" srcbuf=\"i\" srcoff=\"6\" dstbuf=\"i\" dstoff=\"6\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"23\" type=\"r\" srcbuf=\"i\" srcoff=\"5\" dstbuf=\"i\" dstoff=\"5\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"24\" type=\"s\" srcbuf=\"i\" srcoff=\"5\" dstbuf=\"i\" dstoff=\"5\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"25\" type=\"r\" srcbuf=\"i\" srcoff=\"4\" dstbuf=\"i\" dstoff=\"4\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"26\" type=\"s\" srcbuf=\"i\" srcoff=\"4\" dstbuf=\"i\" dstoff=\"4\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"27\" type=\"r\" srcbuf=\"i\" srcoff=\"3\" dstbuf=\"i\" dstoff=\"3\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n    </tb>\n  </gpu>\n  <gpu id=\"2\" i_chunks=\"8\" o_chunks=\"0\" s_chunks=\"0\">\n    <tb id=\"0\" send=\"3\" recv=\"1\" chan=\"0\">\n      <step s=\"0\" type=\"s\" srcbuf=\"i\" srcoff=\"2\" dstbuf=\"i\" dstoff=\"2\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"1\" type=\"rrc\" srcbuf=\"i\" srcoff=\"1\" dstbuf=\"i\" dstoff=\"1\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"2\" type=\"s\" srcbuf=\"i\" srcoff=\"1\" dstbuf=\"i\" dstoff=\"1\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"3\" type=\"rrc\" srcbuf=\"i\" srcoff=\"0\" dstbuf=\"i\" dstoff=\"0\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"4\" type=\"s\" srcbuf=\"i\" srcoff=\"0\" dstbuf=\"i\" dstoff=\"0\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"5\" type=\"rrc\" srcbuf=\"i\" srcoff=\"7\" dstbuf=\"i\" dstoff=\"7\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"6\" type=\"s\" srcbuf=\"i\" srcoff=\"7\" dstbuf=\"i\" dstoff=\"7\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"7\" type=\"rrc\" srcbuf=\"i\" srcoff=\"6\" dstbuf=\"i\" dstoff=\"6\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"8\" type=\"s\" srcbuf=\"i\" srcoff=\"6\" dstbuf=\"i\" dstoff=\"6\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"9\" type=\"rrc\" srcbuf=\"i\" srcoff=\"5\" dstbuf=\"i\" dstoff=\"5\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"10\" type=\"s\" srcbuf=\"i\" srcoff=\"5\" dstbuf=\"i\" dstoff=\"5\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"11\" type=\"rrc\" srcbuf=\"i\" srcoff=\"4\" dstbuf=\"i\" dstoff=\"4\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"12\" type=\"s\" srcbuf=\"i\" srcoff=\"4\" dstbuf=\"i\" dstoff=\"4\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"13\" type=\"rrc\" srcbuf=\"i\" srcoff=\"3\" dstbuf=\"i\" dstoff=\"3\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"14\" type=\"s\" srcbuf=\"i\" srcoff=\"3\" dstbuf=\"i\" dstoff=\"3\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"15\" type=\"r\" srcbuf=\"i\" srcoff=\"2\" dstbuf=\"i\" dstoff=\"2\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"16\" type=\"s\" srcbuf=\"i\" srcoff=\"2\" dstbuf=\"i\" dstoff=\"2\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"17\" type=\"r\" srcbuf=\"i\" srcoff=\"1\" dstbuf=\"i\" dstoff=\"1\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"18\" type=\"s\" srcbuf=\"i\" srcoff=\"1\" dstbuf=\"i\" dstoff=\"1\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"19\" type=\"r\" srcbuf=\"i\" srcoff=\"0\" dstbuf=\"i\" dstoff=\"0\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"20\" type=\"s\" srcbuf=\"i\" srcoff=\"0\" dstbuf=\"i\" dstoff=\"0\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"21\" type=\"r\" srcbuf=\"i\" srcoff=\"7\" dstbuf=\"i\" dstoff=\"7\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"22\" type=\"s\" srcbuf=\"i\" srcoff=\"7\" dstbuf=\"i\" dstoff=\"7\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"23\" type=\"r\" srcbuf=\"i\" srcoff=\"6\" dstbuf=\"i\" dstoff=\"6\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"24\" type=\"s\" srcbuf=\"i\" srcoff=\"6\" dstbuf=\"i\" dstoff=\"6\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"25\" type=\"r\" srcbuf=\"i\" srcoff=\"5\" dstbuf=\"i\" dstoff=\"5\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"26\" type=\"s\" srcbuf=\"i\" srcoff=\"5\" dstbuf=\"i\" dstoff=\"5\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"27\" type=\"r\" srcbuf=\"i\" srcoff=\"4\" dstbuf=\"i\" dstoff=\"4\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n    </tb>\n  </gpu>\n  <gpu id=\"3\" i_chunks=\"8\" o_chunks=\"0\" s_chunks=\"0\">\n    <tb id=\"0\" send=\"4\" recv=\"2\" chan=\"0\">\n      <step s=\"0\" type=\"s\" srcbuf=\"i\" srcoff=\"3\" dstbuf=\"i\" dstoff=\"3\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"1\" type=\"rrc\" srcbuf=\"i\" srcoff=\"2\" dstbuf=\"i\" dstoff=\"2\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"2\" type=\"s\" srcbuf=\"i\" srcoff=\"2\" dstbuf=\"i\" dstoff=\"2\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"3\" type=\"rrc\" srcbuf=\"i\" srcoff=\"1\" dstbuf=\"i\" dstoff=\"1\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"4\" type=\"s\" srcbuf=\"i\" srcoff=\"1\" dstbuf=\"i\" dstoff=\"1\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"5\" type=\"rrc\" srcbuf=\"i\" srcoff=\"0\" dstbuf=\"i\" dstoff=\"0\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"6\" type=\"s\" srcbuf=\"i\" srcoff=\"0\" dstbuf=\"i\" dstoff=\"0\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"7\" type=\"rrc\" srcbuf=\"i\" srcoff=\"7\" dstbuf=\"i\" dstoff=\"7\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"8\" type=\"s\" srcbuf=\"i\" srcoff=\"7\" dstbuf=\"i\" dstoff=\"7\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"9\" type=\"rrc\" srcbuf=\"i\" srcoff=\"6\" dstbuf=\"i\" dstoff=\"6\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"10\" type=\"s\" srcbuf=\"i\" srcoff=\"6\" dstbuf=\"i\" dstoff=\"6\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"11\" type=\"rrc\" srcbuf=\"i\" srcoff=\"5\" dstbuf=\"i\" dstoff=\"5\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"12\" type=\"s\" srcbuf=\"i\" srcoff=\"5\" dstbuf=\"i\" dstoff=\"5\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"13\" type=\"rrc\" srcbuf=\"i\" srcoff=\"4\" dstbuf=\"i\" dstoff=\"4\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"14\" type=\"s\" srcbuf=\"i\" srcoff=\"4\" dstbuf=\"i\" dstoff=\"4\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"15\" type=\"r\" srcbuf=\"i\" srcoff=\"3\" dstbuf=\"i\" dstoff=\"3\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"16\" type=\"s\" srcbuf=\"i\" srcoff=\"3\" dstbuf=\"i\" dstoff=\"3\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"17\" type=\"r\" srcbuf=\"i\" srcoff=\"2\" dstbuf=\"i\" dstoff=\"2\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"18\" type=\"s\" srcbuf=\"i\" srcoff=\"2\" dstbuf=\"i\" dstoff=\"2\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"19\" type=\"r\" srcbuf=\"i\" srcoff=\"1\" dstbuf=\"i\" dstoff=\"1\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"20\" type=\"s\" srcbuf=\"i\" srcoff=\"1\" dstbuf=\"i\" dstoff=\"1\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"21\" type=\"r\" srcbuf=\"i\" srcoff=\"0\" dstbuf=\"i\" dstoff=\"0\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"22\" type=\"s\" srcbuf=\"i\" srcoff=\"0\" dstbuf=\"i\" dstoff=\"0\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"23\" type=\"r\" srcbuf=\"i\" srcoff=\"7\" dstbuf=\"i\" dstoff=\"7\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"24\" type=\"s\" srcbuf=\"i\" srcoff=\"7\" dstbuf=\"i\" dstoff=\"7\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"25\" type=\"r\" srcbuf=\"i\" srcoff=\"6\" dstbuf=\"i\" dstoff=\"6\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"26\" type=\"s\" srcbuf=\"i\" srcoff=\"6\" dstbuf=\"i\" dstoff=\"6\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"27\" type=\"r\" srcbuf=\"i\" srcoff=\"5\" dstbuf=\"i\" dstoff=\"5\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n    </tb>\n  </gpu>\n  <gpu id=\"4\" i_chunks=\"8\" o_chunks=\"0\" s_chunks=\"0\">\n    <tb id=\"0\" send=\"5\" recv=\"3\" chan=\"0\">\n      <step s=\"0\" type=\"s\" srcbuf=\"i\" srcoff=\"4\" dstbuf=\"i\" dstoff=\"4\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"1\" type=\"rrc\" srcbuf=\"i\" srcoff=\"3\" dstbuf=\"i\" dstoff=\"3\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"2\" type=\"s\" srcbuf=\"i\" srcoff=\"3\" dstbuf=\"i\" dstoff=\"3\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"3\" type=\"rrc\" srcbuf=\"i\" srcoff=\"2\" dstbuf=\"i\" dstoff=\"2\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"4\" type=\"s\" srcbuf=\"i\" srcoff=\"2\" dstbuf=\"i\" dstoff=\"2\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"5\" type=\"rrc\" srcbuf=\"i\" srcoff=\"1\" dstbuf=\"i\" dstoff=\"1\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"6\" type=\"s\" srcbuf=\"i\" srcoff=\"1\" dstbuf=\"i\" dstoff=\"1\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"7\" type=\"rrc\" srcbuf=\"i\" srcoff=\"0\" dstbuf=\"i\" dstoff=\"0\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"8\" type=\"s\" srcbuf=\"i\" srcoff=\"0\" dstbuf=\"i\" dstoff=\"0\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"9\" type=\"rrc\" srcbuf=\"i\" srcoff=\"7\" dstbuf=\"i\" dstoff=\"7\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"10\" type=\"s\" srcbuf=\"i\" srcoff=\"7\" dstbuf=\"i\" dstoff=\"7\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"11\" type=\"rrc\" srcbuf=\"i\" srcoff=\"6\" dstbuf=\"i\" dstoff=\"6\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"12\" type=\"s\" srcbuf=\"i\" srcoff=\"6\" dstbuf=\"i\" dstoff=\"6\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"13\" type=\"rrc\" srcbuf=\"i\" srcoff=\"5\" dstbuf=\"i\" dstoff=\"5\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"14\" type=\"s\" srcbuf=\"i\" srcoff=\"5\" dstbuf=\"i\" dstoff=\"5\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"15\" type=\"r\" srcbuf=\"i\" srcoff=\"4\" dstbuf=\"i\" dstoff=\"4\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"16\" type=\"s\" srcbuf=\"i\" srcoff=\"4\" dstbuf=\"i\" dstoff=\"4\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"17\" type=\"r\" srcbuf=\"i\" srcoff=\"3\" dstbuf=\"i\" dstoff=\"3\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"18\" type=\"s\" srcbuf=\"i\" srcoff=\"3\" dstbuf=\"i\" dstoff=\"3\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"19\" type=\"r\" srcbuf=\"i\" srcoff=\"2\" dstbuf=\"i\" dstoff=\"2\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"20\" type=\"s\" srcbuf=\"i\" srcoff=\"2\" dstbuf=\"i\" dstoff=\"2\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"21\" type=\"r\" srcbuf=\"i\" srcoff=\"1\" dstbuf=\"i\" dstoff=\"1\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"22\" type=\"s\" srcbuf=\"i\" srcoff=\"1\" dstbuf=\"i\" dstoff=\"1\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"23\" type=\"r\" srcbuf=\"i\" srcoff=\"0\" dstbuf=\"i\" dstoff=\"0\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"24\" type=\"s\" srcbuf=\"i\" srcoff=\"0\" dstbuf=\"i\" dstoff=\"0\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"25\" type=\"r\" srcbuf=\"i\" srcoff=\"7\" dstbuf=\"i\" dstoff=\"7\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"26\" type=\"s\" srcbuf=\"i\" srcoff=\"7\" dstbuf=\"i\" dstoff=\"7\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"27\" type=\"r\" srcbuf=\"i\" srcoff=\"6\" dstbuf=\"i\" dstoff=\"6\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n    </tb>\n  </gpu>\n  <gpu id=\"5\" i_chunks=\"8\" o_chunks=\"0\" s_chunks=\"0\">\n    <tb id=\"0\" send=\"6\" recv=\"4\" chan=\"0\">\n      <step s=\"0\" type=\"s\" srcbuf=\"i\" srcoff=\"5\" dstbuf=\"i\" dstoff=\"5\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"1\" type=\"rrc\" srcbuf=\"i\" srcoff=\"4\" dstbuf=\"i\" dstoff=\"4\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"2\" type=\"s\" srcbuf=\"i\" srcoff=\"4\" dstbuf=\"i\" dstoff=\"4\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"3\" type=\"rrc\" srcbuf=\"i\" srcoff=\"3\" dstbuf=\"i\" dstoff=\"3\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"4\" type=\"s\" srcbuf=\"i\" srcoff=\"3\" dstbuf=\"i\" dstoff=\"3\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"5\" type=\"rrc\" srcbuf=\"i\" srcoff=\"2\" dstbuf=\"i\" dstoff=\"2\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"6\" type=\"s\" srcbuf=\"i\" srcoff=\"2\" dstbuf=\"i\" dstoff=\"2\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"7\" type=\"rrc\" srcbuf=\"i\" srcoff=\"1\" dstbuf=\"i\" dstoff=\"1\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"8\" type=\"s\" srcbuf=\"i\" srcoff=\"1\" dstbuf=\"i\" dstoff=\"1\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"9\" type=\"rrc\" srcbuf=\"i\" srcoff=\"0\" dstbuf=\"i\" dstoff=\"0\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"10\" type=\"s\" srcbuf=\"i\" srcoff=\"0\" dstbuf=\"i\" dstoff=\"0\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"11\" type=\"rrc\" srcbuf=\"i\" srcoff=\"7\" dstbuf=\"i\" dstoff=\"7\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"12\" type=\"s\" srcbuf=\"i\" srcoff=\"7\" dstbuf=\"i\" dstoff=\"7\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"13\" type=\"rrc\" srcbuf=\"i\" srcoff=\"6\" dstbuf=\"i\" dstoff=\"6\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"14\" type=\"s\" srcbuf=\"i\" srcoff=\"6\" dstbuf=\"i\" dstoff=\"6\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"15\" type=\"r\" srcbuf=\"i\" srcoff=\"5\" dstbuf=\"i\" dstoff=\"5\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"16\" type=\"s\" srcbuf=\"i\" srcoff=\"5\" dstbuf=\"i\" dstoff=\"5\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"17\" type=\"r\" srcbuf=\"i\" srcoff=\"4\" dstbuf=\"i\" dstoff=\"4\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"18\" type=\"s\" srcbuf=\"i\" srcoff=\"4\" dstbuf=\"i\" dstoff=\"4\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"19\" type=\"r\" srcbuf=\"i\" srcoff=\"3\" dstbuf=\"i\" dstoff=\"3\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"20\" type=\"s\" srcbuf=\"i\" srcoff=\"3\" dstbuf=\"i\" dstoff=\"3\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"21\" type=\"r\" srcbuf=\"i\" srcoff=\"2\" dstbuf=\"i\" dstoff=\"2\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"22\" type=\"s\" srcbuf=\"i\" srcoff=\"2\" dstbuf=\"i\" dstoff=\"2\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"23\" type=\"r\" srcbuf=\"i\" srcoff=\"1\" dstbuf=\"i\" dstoff=\"1\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"24\" type=\"s\" srcbuf=\"i\" srcoff=\"1\" dstbuf=\"i\" dstoff=\"1\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"25\" type=\"r\" srcbuf=\"i\" srcoff=\"0\" dstbuf=\"i\" dstoff=\"0\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"26\" type=\"s\" srcbuf=\"i\" srcoff=\"0\" dstbuf=\"i\" dstoff=\"0\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"27\" type=\"r\" srcbuf=\"i\" srcoff=\"7\" dstbuf=\"i\" dstoff=\"7\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n    </tb>\n  </gpu>\n  <gpu id=\"6\" i_chunks=\"8\" o_chunks=\"0\" s_chunks=\"0\">\n    <tb id=\"0\" send=\"7\" recv=\"5\" chan=\"0\">\n      <step s=\"0\" type=\"s\" srcbuf=\"i\" srcoff=\"6\" dstbuf=\"i\" dstoff=\"6\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"1\" type=\"rrc\" srcbuf=\"i\" srcoff=\"5\" dstbuf=\"i\" dstoff=\"5\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"2\" type=\"s\" srcbuf=\"i\" srcoff=\"5\" dstbuf=\"i\" dstoff=\"5\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"3\" type=\"rrc\" srcbuf=\"i\" srcoff=\"4\" dstbuf=\"i\" dstoff=\"4\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"4\" type=\"s\" srcbuf=\"i\" srcoff=\"4\" dstbuf=\"i\" dstoff=\"4\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"5\" type=\"rrc\" srcbuf=\"i\" srcoff=\"3\" dstbuf=\"i\" dstoff=\"3\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"6\" type=\"s\" srcbuf=\"i\" srcoff=\"3\" dstbuf=\"i\" dstoff=\"3\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"7\" type=\"rrc\" srcbuf=\"i\" srcoff=\"2\" dstbuf=\"i\" dstoff=\"2\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"8\" type=\"s\" srcbuf=\"i\" srcoff=\"2\" dstbuf=\"i\" dstoff=\"2\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"9\" type=\"rrc\" srcbuf=\"i\" srcoff=\"1\" dstbuf=\"i\" dstoff=\"1\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"10\" type=\"s\" srcbuf=\"i\" srcoff=\"1\" dstbuf=\"i\" dstoff=\"1\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"11\" type=\"rrc\" srcbuf=\"i\" srcoff=\"0\" dstbuf=\"i\" dstoff=\"0\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"12\" type=\"s\" srcbuf=\"i\" srcoff=\"0\" dstbuf=\"i\" dstoff=\"0\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"13\" type=\"rrc\" srcbuf=\"i\" srcoff=\"7\" dstbuf=\"i\" dstoff=\"7\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"14\" type=\"s\" srcbuf=\"i\" srcoff=\"7\" dstbuf=\"i\" dstoff=\"7\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"15\" type=\"r\" srcbuf=\"i\" srcoff=\"6\" dstbuf=\"i\" dstoff=\"6\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"16\" type=\"s\" srcbuf=\"i\" srcoff=\"6\" dstbuf=\"i\" dstoff=\"6\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"17\" type=\"r\" srcbuf=\"i\" srcoff=\"5\" dstbuf=\"i\" dstoff=\"5\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"18\" type=\"s\" srcbuf=\"i\" srcoff=\"5\" dstbuf=\"i\" dstoff=\"5\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"19\" type=\"r\" srcbuf=\"i\" srcoff=\"4\" dstbuf=\"i\" dstoff=\"4\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"20\" type=\"s\" srcbuf=\"i\" srcoff=\"4\" dstbuf=\"i\" dstoff=\"4\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"21\" type=\"r\" srcbuf=\"i\" srcoff=\"3\" dstbuf=\"i\" dstoff=\"3\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"22\" type=\"s\" srcbuf=\"i\" srcoff=\"3\" dstbuf=\"i\" dstoff=\"3\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"23\" type=\"r\" srcbuf=\"i\" srcoff=\"2\" dstbuf=\"i\" dstoff=\"2\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"24\" type=\"s\" srcbuf=\"i\" srcoff=\"2\" dstbuf=\"i\" dstoff=\"2\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"25\" type=\"r\" srcbuf=\"i\" srcoff=\"1\" dstbuf=\"i\" dstoff=\"1\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"26\" type=\"s\" srcbuf=\"i\" srcoff=\"1\" dstbuf=\"i\" dstoff=\"1\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"27\" type=\"r\" srcbuf=\"i\" srcoff=\"0\" dstbuf=\"i\" dstoff=\"0\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n    </tb>\n  </gpu>\n  <gpu id=\"7\" i_chunks=\"8\" o_chunks=\"0\" s_chunks=\"0\">\n    <tb id=\"0\" send=\"0\" recv=\"6\" chan=\"0\">\n      <step s=\"0\" type=\"s\" srcbuf=\"i\" srcoff=\"7\" dstbuf=\"i\" dstoff=\"7\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"1\" type=\"rrc\" srcbuf=\"i\" srcoff=\"6\" dstbuf=\"i\" dstoff=\"6\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"2\" type=\"s\" srcbuf=\"i\" srcoff=\"6\" dstbuf=\"i\" dstoff=\"6\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"3\" type=\"rrc\" srcbuf=\"i\" srcoff=\"5\" dstbuf=\"i\" dstoff=\"5\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"4\" type=\"s\" srcbuf=\"i\" srcoff=\"5\" dstbuf=\"i\" dstoff=\"5\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"5\" type=\"rrc\" srcbuf=\"i\" srcoff=\"4\" dstbuf=\"i\" dstoff=\"4\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"6\" type=\"s\" srcbuf=\"i\" srcoff=\"4\" dstbuf=\"i\" dstoff=\"4\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"7\" type=\"rrc\" srcbuf=\"i\" srcoff=\"3\" dstbuf=\"i\" dstoff=\"3\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"8\" type=\"s\" srcbuf=\"i\" srcoff=\"3\" dstbuf=\"i\" dstoff=\"3\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"9\" type=\"rrc\" srcbuf=\"i\" srcoff=\"2\" dstbuf=\"i\" dstoff=\"2\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"10\" type=\"s\" srcbuf=\"i\" srcoff=\"2\" dstbuf=\"i\" dstoff=\"2\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"11\" type=\"rrc\" srcbuf=\"i\" srcoff=\"1\" dstbuf=\"i\" dstoff=\"1\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"12\" type=\"s\" srcbuf=\"i\" srcoff=\"1\" dstbuf=\"i\" dstoff=\"1\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"13\" type=\"rrc\" srcbuf=\"i\" srcoff=\"0\" dstbuf=\"i\" dstoff=\"0\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"14\" type=\"s\" srcbuf=\"i\" srcoff=\"0\" dstbuf=\"i\" dstoff=\"0\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"15\" type=\"r\" srcbuf=\"i\" srcoff=\"7\" dstbuf=\"i\" dstoff=\"7\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"16\" type=\"s\" srcbuf=\"i\" srcoff=\"7\" dstbuf=\"i\" dstoff=\"7\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"17\" type=\"r\" srcbuf=\"i\" srcoff=\"6\" dstbuf=\"i\" dstoff=\"6\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"18\" type=\"s\" srcbuf=\"i\" srcoff=\"6\" dstbuf=\"i\" dstoff=\"6\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"19\" type=\"r\" srcbuf=\"i\" srcoff=\"5\" dstbuf=\"i\" dstoff=\"5\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"20\" type=\"s\" srcbuf=\"i\" srcoff=\"5\" dstbuf=\"i\" dstoff=\"5\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"21\" type=\"r\" srcbuf=\"i\" srcoff=\"4\" dstbuf=\"i\" dstoff=\"4\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"22\" type=\"s\" srcbuf=\"i\" srcoff=\"4\" dstbuf=\"i\" dstoff=\"4\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"23\" type=\"r\" srcbuf=\"i\" srcoff=\"3\" dstbuf=\"i\" dstoff=\"3\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"24\" type=\"s\" srcbuf=\"i\" srcoff=\"3\" dstbuf=\"i\" dstoff=\"3\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"25\" type=\"r\" srcbuf=\"i\" srcoff=\"2\" dstbuf=\"i\" dstoff=\"2\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"26\" type=\"s\" srcbuf=\"i\" srcoff=\"2\" dstbuf=\"i\" dstoff=\"2\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n      <step s=\"27\" type=\"r\" srcbuf=\"i\" srcoff=\"1\" dstbuf=\"i\" dstoff=\"1\" cnt=\"1\" depid=\"-1\" deps=\"-1\" hasdep=\"0\"/>\n    </tb>\n  </gpu>\n</algo>\n"
+    },
+    {
+      "name": "collective",
+      "stringVal": "allreduce"
+    }
+  ]
+}{
+  "name": "COMM_SEND_NODE_tb0_step0",
+  "type": "COMM_SEND_NODE",
+  "attr": [
+    {
+      "name": "comm_type",
+      "int64Val": "5"
+    },
+    {
+      "name": "comm_dst",
+      "int32Val": 7
+    },
+    {
+      "name": "comm_tag",
+      "int32Val": 0
+    },
+    {
+      "name": "msg_chunk_cnt",
+      "int32Val": 1
+    },
+    {
+      "name": "msg_chunk_idx",
+      "int32Val": 6
+    },
+    {
+      "name": "total_chunk_cnt",
+      "int32Val": 8
+    },
+    {
+      "name": "local_time_step",
+      "int32Val": 0
+    },
+    {
+      "name": "chunk_offset",
+      "int32Val": 6
+    },
+    {
+      "name": "hasdep",
+      "int32Val": 0
+    },
+    {
+      "name": "deps",
+      "int32Val": -1
+    },
+    {
+      "name": "depid",
+      "int32Val": -1
+    },
+    {
+      "name": "tb_id",
+      "int32Val": 0
+    }
+  ]
+}{
+  "id": "1",
+  "name": "COMM_RECV_NODE_tb0_step1",
+  "type": "COMM_RECV_NODE",
+  "dataDeps": [
+    "0"
+  ],
+  "attr": [
+    {
+      "name": "comm_type",
+      "int64Val": "6"
+    },
+    {
+      "name": "comm_src",
+      "int32Val": 5
+    },
+    {
+      "name": "comm_tag",
+      "int32Val": 0
+    },
+    {
+      "name": "msg_chunk_cnt",
+      "int32Val": 1
+    },
+    {
+      "name": "msg_chunk_idx",
+      "int32Val": 5
+    },
+    {
+      "name": "total_chunk_cnt",
+      "int32Val": 8
+    },
+    {
+      "name": "local_time_step",
+      "int32Val": 1
+    },
+    {
+      "name": "chunk_offset",
+      "int32Val": 5
+    },
+    {
+      "name": "is_rrc",
+      "boolVal": true
+    },
+    {
+      "name": "hasdep",
+      "int32Val": 0
+    },
+    {
+      "name": "deps",
+      "int32Val": -1
+    },
+    {
+      "name": "depid",
+      "int32Val": -1
+    },
+    {
+      "name": "tb_id",
+      "int32Val": 0
+    }
+  ]
+}{
+  "id": "2",
+  "name": "COMP_NODE_tb0_step1",
+  "type": "COMP_NODE",
+  "dataDeps": [
+    "1"
+  ]
+}{
+  "id": "3",
+  "name": "COMM_SEND_NODE_tb0_step2",
+  "type": "COMM_SEND_NODE",
+  "dataDeps": [
+    "2"
+  ],
+  "attr": [
+    {
+      "name": "comm_type",
+      "int64Val": "5"
+    },
+    {
+      "name": "comm_dst",
+      "int32Val": 7
+    },
+    {
+      "name": "comm_tag",
+      "int32Val": 0
+    },
+    {
+      "name": "msg_chunk_cnt",
+      "int32Val": 1
+    },
+    {
+      "name": "msg_chunk_idx",
+      "int32Val": 5
+    },
+    {
+      "name": "total_chunk_cnt",
+      "int32Val": 8
+    },
+    {
+      "name": "local_time_step",
+      "int32Val": 2
+    },
+    {
+      "name": "chunk_offset",
+      "int32Val": 5
+    },
+    {
+      "name": "hasdep",
+      "int32Val": 0
+    },
+    {
+      "name": "deps",
+      "int32Val": -1
+    },
+    {
+      "name": "depid",
+      "int32Val": -1
+    },
+    {
+      "name": "tb_id",
+      "int32Val": 0
+    }
+  ]
+}{
+  "id": "4",
+  "name": "COMM_RECV_NODE_tb0_step3",
+  "type": "COMM_RECV_NODE",
+  "dataDeps": [
+    "3"
+  ],
+  "attr": [
+    {
+      "name": "comm_type",
+      "int64Val": "6"
+    },
+    {
+      "name": "comm_src",
+      "int32Val": 5
+    },
+    {
+      "name": "comm_tag",
+      "int32Val": 0
+    },
+    {
+      "name": "msg_chunk_cnt",
+      "int32Val": 1
+    },
+    {
+      "name": "msg_chunk_idx",
+      "int32Val": 4
+    },
+    {
+      "name": "total_chunk_cnt",
+      "int32Val": 8
+    },
+    {
+      "name": "local_time_step",
+      "int32Val": 3
+    },
+    {
+      "name": "chunk_offset",
+      "int32Val": 4
+    },
+    {
+      "name": "is_rrc",
+      "boolVal": true
+    },
+    {
+      "name": "hasdep",
+      "int32Val": 0
+    },
+    {
+      "name": "deps",
+      "int32Val": -1
+    },
+    {
+      "name": "depid",
+      "int32Val": -1
+    },
+    {
+      "name": "tb_id",
+      "int32Val": 0
+    }
+  ]
+}{
+  "id": "5",
+  "name": "COMP_NODE_tb0_step3",
+  "type": "COMP_NODE",
+  "dataDeps": [
+    "4"
+  ]
+}{
+  "id": "6",
+  "name": "COMM_SEND_NODE_tb0_step4",
+  "type": "COMM_SEND_NODE",
+  "dataDeps": [
+    "5"
+  ],
+  "attr": [
+    {
+      "name": "comm_type",
+      "int64Val": "5"
+    },
+    {
+      "name": "comm_dst",
+      "int32Val": 7
+    },
+    {
+      "name": "comm_tag",
+      "int32Val": 0
+    },
+    {
+      "name": "msg_chunk_cnt",
+      "int32Val": 1
+    },
+    {
+      "name": "msg_chunk_idx",
+      "int32Val": 4
+    },
+    {
+      "name": "total_chunk_cnt",
+      "int32Val": 8
+    },
+    {
+      "name": "local_time_step",
+      "int32Val": 4
+    },
+    {
+      "name": "chunk_offset",
+      "int32Val": 4
+    },
+    {
+      "name": "hasdep",
+      "int32Val": 0
+    },
+    {
+      "name": "deps",
+      "int32Val": -1
+    },
+    {
+      "name": "depid",
+      "int32Val": -1
+    },
+    {
+      "name": "tb_id",
+      "int32Val": 0
+    }
+  ]
+}{
+  "id": "7",
+  "name": "COMM_RECV_NODE_tb0_step5",
+  "type": "COMM_RECV_NODE",
+  "dataDeps": [
+    "6"
+  ],
+  "attr": [
+    {
+      "name": "comm_type",
+      "int64Val": "6"
+    },
+    {
+      "name": "comm_src",
+      "int32Val": 5
+    },
+    {
+      "name": "comm_tag",
+      "int32Val": 0
+    },
+    {
+      "name": "msg_chunk_cnt",
+      "int32Val": 1
+    },
+    {
+      "name": "msg_chunk_idx",
+      "int32Val": 3
+    },
+    {
+      "name": "total_chunk_cnt",
+      "int32Val": 8
+    },
+    {
+      "name": "local_time_step",
+      "int32Val": 5
+    },
+    {
+      "name": "chunk_offset",
+      "int32Val": 3
+    },
+    {
+      "name": "is_rrc",
+      "boolVal": true
+    },
+    {
+      "name": "hasdep",
+      "int32Val": 0
+    },
+    {
+      "name": "deps",
+      "int32Val": -1
+    },
+    {
+      "name": "depid",
+      "int32Val": -1
+    },
+    {
+      "name": "tb_id",
+      "int32Val": 0
+    }
+  ]
+}{
+  "id": "8",
+  "name": "COMP_NODE_tb0_step5",
+  "type": "COMP_NODE",
+  "dataDeps": [
+    "7"
+  ]
+}{
+  "id": "9",
+  "name": "COMM_SEND_NODE_tb0_step6",
+  "type": "COMM_SEND_NODE",
+  "dataDeps": [
+    "8"
+  ],
+  "attr": [
+    {
+      "name": "comm_type",
+      "int64Val": "5"
+    },
+    {
+      "name": "comm_dst",
+      "int32Val": 7
+    },
+    {
+      "name": "comm_tag",
+      "int32Val": 0
+    },
+    {
+      "name": "msg_chunk_cnt",
+      "int32Val": 1
+    },
+    {
+      "name": "msg_chunk_idx",
+      "int32Val": 3
+    },
+    {
+      "name": "total_chunk_cnt",
+      "int32Val": 8
+    },
+    {
+      "name": "local_time_step",
+      "int32Val": 6
+    },
+    {
+      "name": "chunk_offset",
+      "int32Val": 3
+    },
+    {
+      "name": "hasdep",
+      "int32Val": 0
+    },
+    {
+      "name": "deps",
+      "int32Val": -1
+    },
+    {
+      "name": "depid",
+      "int32Val": -1
+    },
+    {
+      "name": "tb_id",
+      "int32Val": 0
+    }
+  ]
+}{
+  "id": "10",
+  "name": "COMM_RECV_NODE_tb0_step7",
+  "type": "COMM_RECV_NODE",
+  "dataDeps": [
+    "9"
+  ],
+  "attr": [
+    {
+      "name": "comm_type",
+      "int64Val": "6"
+    },
+    {
+      "name": "comm_src",
+      "int32Val": 5
+    },
+    {
+      "name": "comm_tag",
+      "int32Val": 0
+    },
+    {
+      "name": "msg_chunk_cnt",
+      "int32Val": 1
+    },
+    {
+      "name": "msg_chunk_idx",
+      "int32Val": 2
+    },
+    {
+      "name": "total_chunk_cnt",
+      "int32Val": 8
+    },
+    {
+      "name": "local_time_step",
+      "int32Val": 7
+    },
+    {
+      "name": "chunk_offset",
+      "int32Val": 2
+    },
+    {
+      "name": "is_rrc",
+      "boolVal": true
+    },
+    {
+      "name": "hasdep",
+      "int32Val": 0
+    },
+    {
+      "name": "deps",
+      "int32Val": -1
+    },
+    {
+      "name": "depid",
+      "int32Val": -1
+    },
+    {
+      "name": "tb_id",
+      "int32Val": 0
+    }
+  ]
+}{
+  "id": "11",
+  "name": "COMP_NODE_tb0_step7",
+  "type": "COMP_NODE",
+  "dataDeps": [
+    "10"
+  ]
+}{
+  "id": "12",
+  "name": "COMM_SEND_NODE_tb0_step8",
+  "type": "COMM_SEND_NODE",
+  "dataDeps": [
+    "11"
+  ],
+  "attr": [
+    {
+      "name": "comm_type",
+      "int64Val": "5"
+    },
+    {
+      "name": "comm_dst",
+      "int32Val": 7
+    },
+    {
+      "name": "comm_tag",
+      "int32Val": 0
+    },
+    {
+      "name": "msg_chunk_cnt",
+      "int32Val": 1
+    },
+    {
+      "name": "msg_chunk_idx",
+      "int32Val": 2
+    },
+    {
+      "name": "total_chunk_cnt",
+      "int32Val": 8
+    },
+    {
+      "name": "local_time_step",
+      "int32Val": 8
+    },
+    {
+      "name": "chunk_offset",
+      "int32Val": 2
+    },
+    {
+      "name": "hasdep",
+      "int32Val": 0
+    },
+    {
+      "name": "deps",
+      "int32Val": -1
+    },
+    {
+      "name": "depid",
+      "int32Val": -1
+    },
+    {
+      "name": "tb_id",
+      "int32Val": 0
+    }
+  ]
+}{
+  "id": "13",
+  "name": "COMM_RECV_NODE_tb0_step9",
+  "type": "COMM_RECV_NODE",
+  "dataDeps": [
+    "12"
+  ],
+  "attr": [
+    {
+      "name": "comm_type",
+      "int64Val": "6"
+    },
+    {
+      "name": "comm_src",
+      "int32Val": 5
+    },
+    {
+      "name": "comm_tag",
+      "int32Val": 0
+    },
+    {
+      "name": "msg_chunk_cnt",
+      "int32Val": 1
+    },
+    {
+      "name": "msg_chunk_idx",
+      "int32Val": 1
+    },
+    {
+      "name": "total_chunk_cnt",
+      "int32Val": 8
+    },
+    {
+      "name": "local_time_step",
+      "int32Val": 9
+    },
+    {
+      "name": "chunk_offset",
+      "int32Val": 1
+    },
+    {
+      "name": "is_rrc",
+      "boolVal": true
+    },
+    {
+      "name": "hasdep",
+      "int32Val": 0
+    },
+    {
+      "name": "deps",
+      "int32Val": -1
+    },
+    {
+      "name": "depid",
+      "int32Val": -1
+    },
+    {
+      "name": "tb_id",
+      "int32Val": 0
+    }
+  ]
+}{
+  "id": "14",
+  "name": "COMP_NODE_tb0_step9",
+  "type": "COMP_NODE",
+  "dataDeps": [
+    "13"
+  ]
+}{
+  "id": "15",
+  "name": "COMM_SEND_NODE_tb0_step10",
+  "type": "COMM_SEND_NODE",
+  "dataDeps": [
+    "14"
+  ],
+  "attr": [
+    {
+      "name": "comm_type",
+      "int64Val": "5"
+    },
+    {
+      "name": "comm_dst",
+      "int32Val": 7
+    },
+    {
+      "name": "comm_tag",
+      "int32Val": 0
+    },
+    {
+      "name": "msg_chunk_cnt",
+      "int32Val": 1
+    },
+    {
+      "name": "msg_chunk_idx",
+      "int32Val": 1
+    },
+    {
+      "name": "total_chunk_cnt",
+      "int32Val": 8
+    },
+    {
+      "name": "local_time_step",
+      "int32Val": 10
+    },
+    {
+      "name": "chunk_offset",
+      "int32Val": 1
+    },
+    {
+      "name": "hasdep",
+      "int32Val": 0
+    },
+    {
+      "name": "deps",
+      "int32Val": -1
+    },
+    {
+      "name": "depid",
+      "int32Val": -1
+    },
+    {
+      "name": "tb_id",
+      "int32Val": 0
+    }
+  ]
+}{
+  "id": "16",
+  "name": "COMM_RECV_NODE_tb0_step11",
+  "type": "COMM_RECV_NODE",
+  "dataDeps": [
+    "15"
+  ],
+  "attr": [
+    {
+      "name": "comm_type",
+      "int64Val": "6"
+    },
+    {
+      "name": "comm_src",
+      "int32Val": 5
+    },
+    {
+      "name": "comm_tag",
+      "int32Val": 0
+    },
+    {
+      "name": "msg_chunk_cnt",
+      "int32Val": 1
+    },
+    {
+      "name": "msg_chunk_idx",
+      "int32Val": 0
+    },
+    {
+      "name": "total_chunk_cnt",
+      "int32Val": 8
+    },
+    {
+      "name": "local_time_step",
+      "int32Val": 11
+    },
+    {
+      "name": "chunk_offset",
+      "int32Val": 0
+    },
+    {
+      "name": "is_rrc",
+      "boolVal": true
+    },
+    {
+      "name": "hasdep",
+      "int32Val": 0
+    },
+    {
+      "name": "deps",
+      "int32Val": -1
+    },
+    {
+      "name": "depid",
+      "int32Val": -1
+    },
+    {
+      "name": "tb_id",
+      "int32Val": 0
+    }
+  ]
+}{
+  "id": "17",
+  "name": "COMP_NODE_tb0_step11",
+  "type": "COMP_NODE",
+  "dataDeps": [
+    "16"
+  ]
+}{
+  "id": "18",
+  "name": "COMM_SEND_NODE_tb0_step12",
+  "type": "COMM_SEND_NODE",
+  "dataDeps": [
+    "17"
+  ],
+  "attr": [
+    {
+      "name": "comm_type",
+      "int64Val": "5"
+    },
+    {
+      "name": "comm_dst",
+      "int32Val": 7
+    },
+    {
+      "name": "comm_tag",
+      "int32Val": 0
+    },
+    {
+      "name": "msg_chunk_cnt",
+      "int32Val": 1
+    },
+    {
+      "name": "msg_chunk_idx",
+      "int32Val": 0
+    },
+    {
+      "name": "total_chunk_cnt",
+      "int32Val": 8
+    },
+    {
+      "name": "local_time_step",
+      "int32Val": 12
+    },
+    {
+      "name": "chunk_offset",
+      "int32Val": 0
+    },
+    {
+      "name": "hasdep",
+      "int32Val": 0
+    },
+    {
+      "name": "deps",
+      "int32Val": -1
+    },
+    {
+      "name": "depid",
+      "int32Val": -1
+    },
+    {
+      "name": "tb_id",
+      "int32Val": 0
+    }
+  ]
+}{
+  "id": "19",
+  "name": "COMM_RECV_NODE_tb0_step13",
+  "type": "COMM_RECV_NODE",
+  "dataDeps": [
+    "18"
+  ],
+  "attr": [
+    {
+      "name": "comm_type",
+      "int64Val": "6"
+    },
+    {
+      "name": "comm_src",
+      "int32Val": 5
+    },
+    {
+      "name": "comm_tag",
+      "int32Val": 0
+    },
+    {
+      "name": "msg_chunk_cnt",
+      "int32Val": 1
+    },
+    {
+      "name": "msg_chunk_idx",
+      "int32Val": 7
+    },
+    {
+      "name": "total_chunk_cnt",
+      "int32Val": 8
+    },
+    {
+      "name": "local_time_step",
+      "int32Val": 13
+    },
+    {
+      "name": "chunk_offset",
+      "int32Val": 7
+    },
+    {
+      "name": "is_rrc",
+      "boolVal": true
+    },
+    {
+      "name": "hasdep",
+      "int32Val": 0
+    },
+    {
+      "name": "deps",
+      "int32Val": -1
+    },
+    {
+      "name": "depid",
+      "int32Val": -1
+    },
+    {
+      "name": "tb_id",
+      "int32Val": 0
+    }
+  ]
+}{
+  "id": "20",
+  "name": "COMP_NODE_tb0_step13",
+  "type": "COMP_NODE",
+  "dataDeps": [
+    "19"
+  ]
+}{
+  "id": "21",
+  "name": "COMM_SEND_NODE_tb0_step14",
+  "type": "COMM_SEND_NODE",
+  "dataDeps": [
+    "20"
+  ],
+  "attr": [
+    {
+      "name": "comm_type",
+      "int64Val": "5"
+    },
+    {
+      "name": "comm_dst",
+      "int32Val": 7
+    },
+    {
+      "name": "comm_tag",
+      "int32Val": 0
+    },
+    {
+      "name": "msg_chunk_cnt",
+      "int32Val": 1
+    },
+    {
+      "name": "msg_chunk_idx",
+      "int32Val": 7
+    },
+    {
+      "name": "total_chunk_cnt",
+      "int32Val": 8
+    },
+    {
+      "name": "local_time_step",
+      "int32Val": 14
+    },
+    {
+      "name": "chunk_offset",
+      "int32Val": 7
+    },
+    {
+      "name": "hasdep",
+      "int32Val": 0
+    },
+    {
+      "name": "deps",
+      "int32Val": -1
+    },
+    {
+      "name": "depid",
+      "int32Val": -1
+    },
+    {
+      "name": "tb_id",
+      "int32Val": 0
+    }
+  ]
+}{
+  "id": "22",
+  "name": "COMM_RECV_NODE_tb0_step15",
+  "type": "COMM_RECV_NODE",
+  "dataDeps": [
+    "21"
+  ],
+  "attr": [
+    {
+      "name": "comm_type",
+      "int64Val": "6"
+    },
+    {
+      "name": "comm_src",
+      "int32Val": 5
+    },
+    {
+      "name": "comm_tag",
+      "int32Val": 0
+    },
+    {
+      "name": "msg_chunk_cnt",
+      "int32Val": 1
+    },
+    {
+      "name": "msg_chunk_idx",
+      "int32Val": 6
+    },
+    {
+      "name": "total_chunk_cnt",
+      "int32Val": 8
+    },
+    {
+      "name": "local_time_step",
+      "int32Val": 15
+    },
+    {
+      "name": "chunk_offset",
+      "int32Val": 6
+    },
+    {
+      "name": "hasdep",
+      "int32Val": 0
+    },
+    {
+      "name": "deps",
+      "int32Val": -1
+    },
+    {
+      "name": "depid",
+      "int32Val": -1
+    },
+    {
+      "name": "tb_id",
+      "int32Val": 0
+    }
+  ]
+}{
+  "id": "23",
+  "name": "COMM_SEND_NODE_tb0_step16",
+  "type": "COMM_SEND_NODE",
+  "dataDeps": [
+    "22"
+  ],
+  "attr": [
+    {
+      "name": "comm_type",
+      "int64Val": "5"
+    },
+    {
+      "name": "comm_dst",
+      "int32Val": 7
+    },
+    {
+      "name": "comm_tag",
+      "int32Val": 0
+    },
+    {
+      "name": "msg_chunk_cnt",
+      "int32Val": 1
+    },
+    {
+      "name": "msg_chunk_idx",
+      "int32Val": 6
+    },
+    {
+      "name": "total_chunk_cnt",
+      "int32Val": 8
+    },
+    {
+      "name": "local_time_step",
+      "int32Val": 16
+    },
+    {
+      "name": "chunk_offset",
+      "int32Val": 6
+    },
+    {
+      "name": "hasdep",
+      "int32Val": 0
+    },
+    {
+      "name": "deps",
+      "int32Val": -1
+    },
+    {
+      "name": "depid",
+      "int32Val": -1
+    },
+    {
+      "name": "tb_id",
+      "int32Val": 0
+    }
+  ]
+}{
+  "id": "24",
+  "name": "COMM_RECV_NODE_tb0_step17",
+  "type": "COMM_RECV_NODE",
+  "dataDeps": [
+    "23"
+  ],
+  "attr": [
+    {
+      "name": "comm_type",
+      "int64Val": "6"
+    },
+    {
+      "name": "comm_src",
+      "int32Val": 5
+    },
+    {
+      "name": "comm_tag",
+      "int32Val": 0
+    },
+    {
+      "name": "msg_chunk_cnt",
+      "int32Val": 1
+    },
+    {
+      "name": "msg_chunk_idx",
+      "int32Val": 5
+    },
+    {
+      "name": "total_chunk_cnt",
+      "int32Val": 8
+    },
+    {
+      "name": "local_time_step",
+      "int32Val": 17
+    },
+    {
+      "name": "chunk_offset",
+      "int32Val": 5
+    },
+    {
+      "name": "hasdep",
+      "int32Val": 0
+    },
+    {
+      "name": "deps",
+      "int32Val": -1
+    },
+    {
+      "name": "depid",
+      "int32Val": -1
+    },
+    {
+      "name": "tb_id",
+      "int32Val": 0
+    }
+  ]
+}{
+  "id": "25",
+  "name": "COMM_SEND_NODE_tb0_step18",
+  "type": "COMM_SEND_NODE",
+  "dataDeps": [
+    "24"
+  ],
+  "attr": [
+    {
+      "name": "comm_type",
+      "int64Val": "5"
+    },
+    {
+      "name": "comm_dst",
+      "int32Val": 7
+    },
+    {
+      "name": "comm_tag",
+      "int32Val": 0
+    },
+    {
+      "name": "msg_chunk_cnt",
+      "int32Val": 1
+    },
+    {
+      "name": "msg_chunk_idx",
+      "int32Val": 5
+    },
+    {
+      "name": "total_chunk_cnt",
+      "int32Val": 8
+    },
+    {
+      "name": "local_time_step",
+      "int32Val": 18
+    },
+    {
+      "name": "chunk_offset",
+      "int32Val": 5
+    },
+    {
+      "name": "hasdep",
+      "int32Val": 0
+    },
+    {
+      "name": "deps",
+      "int32Val": -1
+    },
+    {
+      "name": "depid",
+      "int32Val": -1
+    },
+    {
+      "name": "tb_id",
+      "int32Val": 0
+    }
+  ]
+}{
+  "id": "26",
+  "name": "COMM_RECV_NODE_tb0_step19",
+  "type": "COMM_RECV_NODE",
+  "dataDeps": [
+    "25"
+  ],
+  "attr": [
+    {
+      "name": "comm_type",
+      "int64Val": "6"
+    },
+    {
+      "name": "comm_src",
+      "int32Val": 5
+    },
+    {
+      "name": "comm_tag",
+      "int32Val": 0
+    },
+    {
+      "name": "msg_chunk_cnt",
+      "int32Val": 1
+    },
+    {
+      "name": "msg_chunk_idx",
+      "int32Val": 4
+    },
+    {
+      "name": "total_chunk_cnt",
+      "int32Val": 8
+    },
+    {
+      "name": "local_time_step",
+      "int32Val": 19
+    },
+    {
+      "name": "chunk_offset",
+      "int32Val": 4
+    },
+    {
+      "name": "hasdep",
+      "int32Val": 0
+    },
+    {
+      "name": "deps",
+      "int32Val": -1
+    },
+    {
+      "name": "depid",
+      "int32Val": -1
+    },
+    {
+      "name": "tb_id",
+      "int32Val": 0
+    }
+  ]
+}{
+  "id": "27",
+  "name": "COMM_SEND_NODE_tb0_step20",
+  "type": "COMM_SEND_NODE",
+  "dataDeps": [
+    "26"
+  ],
+  "attr": [
+    {
+      "name": "comm_type",
+      "int64Val": "5"
+    },
+    {
+      "name": "comm_dst",
+      "int32Val": 7
+    },
+    {
+      "name": "comm_tag",
+      "int32Val": 0
+    },
+    {
+      "name": "msg_chunk_cnt",
+      "int32Val": 1
+    },
+    {
+      "name": "msg_chunk_idx",
+      "int32Val": 4
+    },
+    {
+      "name": "total_chunk_cnt",
+      "int32Val": 8
+    },
+    {
+      "name": "local_time_step",
+      "int32Val": 20
+    },
+    {
+      "name": "chunk_offset",
+      "int32Val": 4
+    },
+    {
+      "name": "hasdep",
+      "int32Val": 0
+    },
+    {
+      "name": "deps",
+      "int32Val": -1
+    },
+    {
+      "name": "depid",
+      "int32Val": -1
+    },
+    {
+      "name": "tb_id",
+      "int32Val": 0
+    }
+  ]
+}{
+  "id": "28",
+  "name": "COMM_RECV_NODE_tb0_step21",
+  "type": "COMM_RECV_NODE",
+  "dataDeps": [
+    "27"
+  ],
+  "attr": [
+    {
+      "name": "comm_type",
+      "int64Val": "6"
+    },
+    {
+      "name": "comm_src",
+      "int32Val": 5
+    },
+    {
+      "name": "comm_tag",
+      "int32Val": 0
+    },
+    {
+      "name": "msg_chunk_cnt",
+      "int32Val": 1
+    },
+    {
+      "name": "msg_chunk_idx",
+      "int32Val": 3
+    },
+    {
+      "name": "total_chunk_cnt",
+      "int32Val": 8
+    },
+    {
+      "name": "local_time_step",
+      "int32Val": 21
+    },
+    {
+      "name": "chunk_offset",
+      "int32Val": 3
+    },
+    {
+      "name": "hasdep",
+      "int32Val": 0
+    },
+    {
+      "name": "deps",
+      "int32Val": -1
+    },
+    {
+      "name": "depid",
+      "int32Val": -1
+    },
+    {
+      "name": "tb_id",
+      "int32Val": 0
+    }
+  ]
+}{
+  "id": "29",
+  "name": "COMM_SEND_NODE_tb0_step22",
+  "type": "COMM_SEND_NODE",
+  "dataDeps": [
+    "28"
+  ],
+  "attr": [
+    {
+      "name": "comm_type",
+      "int64Val": "5"
+    },
+    {
+      "name": "comm_dst",
+      "int32Val": 7
+    },
+    {
+      "name": "comm_tag",
+      "int32Val": 0
+    },
+    {
+      "name": "msg_chunk_cnt",
+      "int32Val": 1
+    },
+    {
+      "name": "msg_chunk_idx",
+      "int32Val": 3
+    },
+    {
+      "name": "total_chunk_cnt",
+      "int32Val": 8
+    },
+    {
+      "name": "local_time_step",
+      "int32Val": 22
+    },
+    {
+      "name": "chunk_offset",
+      "int32Val": 3
+    },
+    {
+      "name": "hasdep",
+      "int32Val": 0
+    },
+    {
+      "name": "deps",
+      "int32Val": -1
+    },
+    {
+      "name": "depid",
+      "int32Val": -1
+    },
+    {
+      "name": "tb_id",
+      "int32Val": 0
+    }
+  ]
+}{
+  "id": "30",
+  "name": "COMM_RECV_NODE_tb0_step23",
+  "type": "COMM_RECV_NODE",
+  "dataDeps": [
+    "29"
+  ],
+  "attr": [
+    {
+      "name": "comm_type",
+      "int64Val": "6"
+    },
+    {
+      "name": "comm_src",
+      "int32Val": 5
+    },
+    {
+      "name": "comm_tag",
+      "int32Val": 0
+    },
+    {
+      "name": "msg_chunk_cnt",
+      "int32Val": 1
+    },
+    {
+      "name": "msg_chunk_idx",
+      "int32Val": 2
+    },
+    {
+      "name": "total_chunk_cnt",
+      "int32Val": 8
+    },
+    {
+      "name": "local_time_step",
+      "int32Val": 23
+    },
+    {
+      "name": "chunk_offset",
+      "int32Val": 2
+    },
+    {
+      "name": "hasdep",
+      "int32Val": 0
+    },
+    {
+      "name": "deps",
+      "int32Val": -1
+    },
+    {
+      "name": "depid",
+      "int32Val": -1
+    },
+    {
+      "name": "tb_id",
+      "int32Val": 0
+    }
+  ]
+}{
+  "id": "31",
+  "name": "COMM_SEND_NODE_tb0_step24",
+  "type": "COMM_SEND_NODE",
+  "dataDeps": [
+    "30"
+  ],
+  "attr": [
+    {
+      "name": "comm_type",
+      "int64Val": "5"
+    },
+    {
+      "name": "comm_dst",
+      "int32Val": 7
+    },
+    {
+      "name": "comm_tag",
+      "int32Val": 0
+    },
+    {
+      "name": "msg_chunk_cnt",
+      "int32Val": 1
+    },
+    {
+      "name": "msg_chunk_idx",
+      "int32Val": 2
+    },
+    {
+      "name": "total_chunk_cnt",
+      "int32Val": 8
+    },
+    {
+      "name": "local_time_step",
+      "int32Val": 24
+    },
+    {
+      "name": "chunk_offset",
+      "int32Val": 2
+    },
+    {
+      "name": "hasdep",
+      "int32Val": 0
+    },
+    {
+      "name": "deps",
+      "int32Val": -1
+    },
+    {
+      "name": "depid",
+      "int32Val": -1
+    },
+    {
+      "name": "tb_id",
+      "int32Val": 0
+    }
+  ]
+}{
+  "id": "32",
+  "name": "COMM_RECV_NODE_tb0_step25",
+  "type": "COMM_RECV_NODE",
+  "dataDeps": [
+    "31"
+  ],
+  "attr": [
+    {
+      "name": "comm_type",
+      "int64Val": "6"
+    },
+    {
+      "name": "comm_src",
+      "int32Val": 5
+    },
+    {
+      "name": "comm_tag",
+      "int32Val": 0
+    },
+    {
+      "name": "msg_chunk_cnt",
+      "int32Val": 1
+    },
+    {
+      "name": "msg_chunk_idx",
+      "int32Val": 1
+    },
+    {
+      "name": "total_chunk_cnt",
+      "int32Val": 8
+    },
+    {
+      "name": "local_time_step",
+      "int32Val": 25
+    },
+    {
+      "name": "chunk_offset",
+      "int32Val": 1
+    },
+    {
+      "name": "hasdep",
+      "int32Val": 0
+    },
+    {
+      "name": "deps",
+      "int32Val": -1
+    },
+    {
+      "name": "depid",
+      "int32Val": -1
+    },
+    {
+      "name": "tb_id",
+      "int32Val": 0
+    }
+  ]
+}{
+  "id": "33",
+  "name": "COMM_SEND_NODE_tb0_step26",
+  "type": "COMM_SEND_NODE",
+  "dataDeps": [
+    "32"
+  ],
+  "attr": [
+    {
+      "name": "comm_type",
+      "int64Val": "5"
+    },
+    {
+      "name": "comm_dst",
+      "int32Val": 7
+    },
+    {
+      "name": "comm_tag",
+      "int32Val": 0
+    },
+    {
+      "name": "msg_chunk_cnt",
+      "int32Val": 1
+    },
+    {
+      "name": "msg_chunk_idx",
+      "int32Val": 1
+    },
+    {
+      "name": "total_chunk_cnt",
+      "int32Val": 8
+    },
+    {
+      "name": "local_time_step",
+      "int32Val": 26
+    },
+    {
+      "name": "chunk_offset",
+      "int32Val": 1
+    },
+    {
+      "name": "hasdep",
+      "int32Val": 0
+    },
+    {
+      "name": "deps",
+      "int32Val": -1
+    },
+    {
+      "name": "depid",
+      "int32Val": -1
+    },
+    {
+      "name": "tb_id",
+      "int32Val": 0
+    }
+  ]
+}{
+  "id": "34",
+  "name": "COMM_RECV_NODE_tb0_step27",
+  "type": "COMM_RECV_NODE",
+  "dataDeps": [
+    "33"
+  ],
+  "attr": [
+    {
+      "name": "comm_type",
+      "int64Val": "6"
+    },
+    {
+      "name": "comm_src",
+      "int32Val": 5
+    },
+    {
+      "name": "comm_tag",
+      "int32Val": 0
+    },
+    {
+      "name": "msg_chunk_cnt",
+      "int32Val": 1
+    },
+    {
+      "name": "msg_chunk_idx",
+      "int32Val": 0
+    },
+    {
+      "name": "total_chunk_cnt",
+      "int32Val": 8
+    },
+    {
+      "name": "local_time_step",
+      "int32Val": 27
+    },
+    {
+      "name": "chunk_offset",
+      "int32Val": 0
+    },
+    {
+      "name": "hasdep",
+      "int32Val": 0
+    },
+    {
+      "name": "deps",
+      "int32Val": -1
+    },
+    {
+      "name": "depid",
+      "int32Val": -1
+    },
+    {
+      "name": "tb_id",
+      "int32Val": 0
+    }
+  ]
+}

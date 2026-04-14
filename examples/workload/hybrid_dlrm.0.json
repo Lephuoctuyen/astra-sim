@@ -1,0 +1,657 @@
+{
+  "version": "0.0.4"
+}{
+  "name": "Embedding_fwd_comp",
+  "type": "COMP_NODE",
+  "durationMicros": "300",
+  "attr": [
+    {
+      "name": "is_cpu_op",
+      "boolVal": false
+    }
+  ]
+}{
+  "id": "1",
+  "name": "Embedding_fwd_comm",
+  "type": "COMM_COLL_NODE",
+  "dataDeps": [
+    "0"
+  ],
+  "attr": [
+    {
+      "name": "is_cpu_op",
+      "boolVal": false
+    },
+    {
+      "name": "comm_type",
+      "int64Val": "6"
+    },
+    {
+      "name": "comm_size",
+      "int64Val": "98304"
+    }
+  ]
+}{
+  "id": "2",
+  "name": "MLP_Bottom_0_fwd_comp",
+  "type": "COMP_NODE",
+  "dataDeps": [
+    "1"
+  ],
+  "durationMicros": "1280",
+  "attr": [
+    {
+      "name": "is_cpu_op",
+      "boolVal": false
+    }
+  ]
+}{
+  "id": "3",
+  "name": "MLP_Bottom_1_fwd_comp",
+  "type": "COMP_NODE",
+  "dataDeps": [
+    "2"
+  ],
+  "durationMicros": "2560",
+  "attr": [
+    {
+      "name": "is_cpu_op",
+      "boolVal": false
+    }
+  ]
+}{
+  "id": "4",
+  "name": "MLP_Bottom_2_fwd_comp",
+  "type": "COMP_NODE",
+  "dataDeps": [
+    "3"
+  ],
+  "durationMicros": "2560",
+  "attr": [
+    {
+      "name": "is_cpu_op",
+      "boolVal": false
+    }
+  ]
+}{
+  "id": "5",
+  "name": "MLP_Bottom_3_fwd_comp",
+  "type": "COMP_NODE",
+  "dataDeps": [
+    "4"
+  ],
+  "durationMicros": "800",
+  "attr": [
+    {
+      "name": "is_cpu_op",
+      "boolVal": false
+    }
+  ]
+}{
+  "id": "6",
+  "name": "MLP_Top_0_fwd_comp",
+  "type": "COMP_NODE",
+  "dataDeps": [
+    "5"
+  ],
+  "durationMicros": "6400",
+  "attr": [
+    {
+      "name": "is_cpu_op",
+      "boolVal": false
+    }
+  ]
+}{
+  "id": "7",
+  "name": "MLP_Top_1_fwd_comp",
+  "type": "COMP_NODE",
+  "dataDeps": [
+    "6"
+  ],
+  "durationMicros": "2560",
+  "attr": [
+    {
+      "name": "is_cpu_op",
+      "boolVal": false
+    }
+  ]
+}{
+  "id": "8",
+  "name": "MLP_Top_2_fwd_comp",
+  "type": "COMP_NODE",
+  "dataDeps": [
+    "7"
+  ],
+  "durationMicros": "2560",
+  "attr": [
+    {
+      "name": "is_cpu_op",
+      "boolVal": false
+    }
+  ]
+}{
+  "id": "9",
+  "name": "MLP_Top_2_bwd_comp",
+  "type": "COMP_NODE",
+  "dataDeps": [
+    "8"
+  ],
+  "durationMicros": "2560",
+  "attr": [
+    {
+      "name": "is_cpu_op",
+      "boolVal": false
+    }
+  ]
+}{
+  "id": "10",
+  "name": "MLP_Top_2_wgrad_comp",
+  "type": "COMP_NODE",
+  "dataDeps": [
+    "9"
+  ],
+  "durationMicros": "1792",
+  "attr": [
+    {
+      "name": "is_cpu_op",
+      "boolVal": false
+    }
+  ]
+}{
+  "id": "11",
+  "name": "MLP_Top_2_wgrad_comm",
+  "type": "COMM_COLL_NODE",
+  "dataDeps": [
+    "10"
+  ],
+  "attr": [
+    {
+      "name": "is_cpu_op",
+      "boolVal": false
+    },
+    {
+      "name": "comm_type",
+      "int64Val": "0"
+    },
+    {
+      "name": "comm_size",
+      "int64Val": "524288"
+    }
+  ]
+}{
+  "id": "12",
+  "name": "MLP_Top_1_bwd_comp",
+  "type": "COMP_NODE",
+  "dataDeps": [
+    "11"
+  ],
+  "durationMicros": "2560",
+  "attr": [
+    {
+      "name": "is_cpu_op",
+      "boolVal": false
+    }
+  ]
+}{
+  "id": "13",
+  "name": "MLP_Top_1_wgrad_comp",
+  "type": "COMP_NODE",
+  "dataDeps": [
+    "12"
+  ],
+  "durationMicros": "1792",
+  "attr": [
+    {
+      "name": "is_cpu_op",
+      "boolVal": false
+    }
+  ]
+}{
+  "id": "14",
+  "name": "MLP_Top_1_wgrad_comm",
+  "type": "COMM_COLL_NODE",
+  "dataDeps": [
+    "13"
+  ],
+  "attr": [
+    {
+      "name": "is_cpu_op",
+      "boolVal": false
+    },
+    {
+      "name": "comm_type",
+      "int64Val": "0"
+    },
+    {
+      "name": "comm_size",
+      "int64Val": "524288"
+    }
+  ]
+}{
+  "id": "15",
+  "name": "MLP_Top_0_bwd_comp",
+  "type": "COMP_NODE",
+  "dataDeps": [
+    "14"
+  ],
+  "durationMicros": "6400",
+  "attr": [
+    {
+      "name": "is_cpu_op",
+      "boolVal": false
+    }
+  ]
+}{
+  "id": "16",
+  "name": "MLP_Top_0_wgrad_comp",
+  "type": "COMP_NODE",
+  "dataDeps": [
+    "15"
+  ],
+  "durationMicros": "4480",
+  "attr": [
+    {
+      "name": "is_cpu_op",
+      "boolVal": false
+    }
+  ]
+}{
+  "id": "17",
+  "name": "MLP_Top_0_wgrad_comm",
+  "type": "COMM_COLL_NODE",
+  "dataDeps": [
+    "16"
+  ],
+  "attr": [
+    {
+      "name": "is_cpu_op",
+      "boolVal": false
+    },
+    {
+      "name": "comm_type",
+      "int64Val": "0"
+    },
+    {
+      "name": "comm_size",
+      "int64Val": "1064960"
+    }
+  ]
+}{
+  "id": "18",
+  "name": "MLP_Bottom_3_bwd_comp",
+  "type": "COMP_NODE",
+  "dataDeps": [
+    "17"
+  ],
+  "durationMicros": "1280",
+  "attr": [
+    {
+      "name": "is_cpu_op",
+      "boolVal": false
+    }
+  ]
+}{
+  "id": "19",
+  "name": "MLP_Bottom_3_wgrad_comp",
+  "type": "COMP_NODE",
+  "dataDeps": [
+    "18"
+  ],
+  "durationMicros": "800",
+  "attr": [
+    {
+      "name": "is_cpu_op",
+      "boolVal": false
+    }
+  ]
+}{
+  "id": "20",
+  "name": "MLP_Bottom_3_wgrad_comm",
+  "type": "COMM_COLL_NODE",
+  "dataDeps": [
+    "19"
+  ],
+  "attr": [
+    {
+      "name": "is_cpu_op",
+      "boolVal": false
+    },
+    {
+      "name": "comm_type",
+      "int64Val": "0"
+    },
+    {
+      "name": "comm_size",
+      "int64Val": "16384"
+    }
+  ]
+}{
+  "id": "21",
+  "name": "MLP_Bottom_2_bwd_comp",
+  "type": "COMP_NODE",
+  "dataDeps": [
+    "20"
+  ],
+  "durationMicros": "2560",
+  "attr": [
+    {
+      "name": "is_cpu_op",
+      "boolVal": false
+    }
+  ]
+}{
+  "id": "22",
+  "name": "MLP_Bottom_2_wgrad_comp",
+  "type": "COMP_NODE",
+  "dataDeps": [
+    "21"
+  ],
+  "durationMicros": "1792",
+  "attr": [
+    {
+      "name": "is_cpu_op",
+      "boolVal": false
+    }
+  ]
+}{
+  "id": "23",
+  "name": "MLP_Bottom_2_wgrad_comm",
+  "type": "COMM_COLL_NODE",
+  "dataDeps": [
+    "22"
+  ],
+  "attr": [
+    {
+      "name": "is_cpu_op",
+      "boolVal": false
+    },
+    {
+      "name": "comm_type",
+      "int64Val": "0"
+    },
+    {
+      "name": "comm_size",
+      "int64Val": "524288"
+    }
+  ]
+}{
+  "id": "24",
+  "name": "MLP_Bottom_1_bwd_comp",
+  "type": "COMP_NODE",
+  "dataDeps": [
+    "23"
+  ],
+  "durationMicros": "2560",
+  "attr": [
+    {
+      "name": "is_cpu_op",
+      "boolVal": false
+    }
+  ]
+}{
+  "id": "25",
+  "name": "MLP_Bottom_1_wgrad_comp",
+  "type": "COMP_NODE",
+  "dataDeps": [
+    "24"
+  ],
+  "durationMicros": "1792",
+  "attr": [
+    {
+      "name": "is_cpu_op",
+      "boolVal": false
+    }
+  ]
+}{
+  "id": "26",
+  "name": "MLP_Bottom_1_wgrad_comm",
+  "type": "COMM_COLL_NODE",
+  "dataDeps": [
+    "25"
+  ],
+  "attr": [
+    {
+      "name": "is_cpu_op",
+      "boolVal": false
+    },
+    {
+      "name": "comm_type",
+      "int64Val": "0"
+    },
+    {
+      "name": "comm_size",
+      "int64Val": "524288"
+    }
+  ]
+}{
+  "id": "27",
+  "name": "MLP_Bottom_0_bwd_comp",
+  "type": "COMP_NODE",
+  "dataDeps": [
+    "26"
+  ],
+  "durationMicros": "794",
+  "attr": [
+    {
+      "name": "is_cpu_op",
+      "boolVal": false
+    }
+  ]
+}{
+  "id": "28",
+  "name": "MLP_Bottom_0_wgrad_comp",
+  "type": "COMP_NODE",
+  "dataDeps": [
+    "27"
+  ],
+  "durationMicros": "896",
+  "attr": [
+    {
+      "name": "is_cpu_op",
+      "boolVal": false
+    }
+  ]
+}{
+  "id": "29",
+  "name": "MLP_Bottom_0_wgrad_comm",
+  "type": "COMM_COLL_NODE",
+  "dataDeps": [
+    "28"
+  ],
+  "attr": [
+    {
+      "name": "is_cpu_op",
+      "boolVal": false
+    },
+    {
+      "name": "comm_type",
+      "int64Val": "0"
+    },
+    {
+      "name": "comm_size",
+      "int64Val": "13312"
+    }
+  ]
+}{
+  "id": "30",
+  "name": "Embedding_bwd_comp",
+  "type": "COMP_NODE",
+  "dataDeps": [
+    "29"
+  ],
+  "durationMicros": "300",
+  "attr": [
+    {
+      "name": "is_cpu_op",
+      "boolVal": false
+    }
+  ]
+}{
+  "id": "31",
+  "name": "Embedding_bwd_comm",
+  "type": "COMM_COLL_NODE",
+  "dataDeps": [
+    "30"
+  ],
+  "attr": [
+    {
+      "name": "is_cpu_op",
+      "boolVal": false
+    },
+    {
+      "name": "comm_type",
+      "int64Val": "6"
+    },
+    {
+      "name": "comm_size",
+      "int64Val": "98304"
+    }
+  ]
+}{
+  "id": "32",
+  "name": "Embedding_wgrad_comp",
+  "type": "COMP_NODE",
+  "dataDeps": [
+    "31"
+  ],
+  "durationMicros": "300",
+  "attr": [
+    {
+      "name": "is_cpu_op",
+      "boolVal": false
+    }
+  ]
+}{
+  "id": "33",
+  "name": "Embedding_update",
+  "type": "COMP_NODE",
+  "dataDeps": [
+    "32"
+  ],
+  "durationMicros": "98",
+  "attr": [
+    {
+      "name": "is_cpu_op",
+      "boolVal": false
+    }
+  ]
+}{
+  "id": "34",
+  "name": "MLP_Bottom_0_update",
+  "type": "COMP_NODE",
+  "dataDeps": [
+    "29"
+  ],
+  "durationMicros": "13",
+  "attr": [
+    {
+      "name": "is_cpu_op",
+      "boolVal": false
+    }
+  ]
+}{
+  "id": "35",
+  "name": "MLP_Bottom_1_update",
+  "type": "COMP_NODE",
+  "dataDeps": [
+    "26"
+  ],
+  "durationMicros": "524",
+  "attr": [
+    {
+      "name": "is_cpu_op",
+      "boolVal": false
+    }
+  ]
+}{
+  "id": "36",
+  "name": "MLP_Bottom_2_update",
+  "type": "COMP_NODE",
+  "dataDeps": [
+    "23"
+  ],
+  "durationMicros": "524",
+  "attr": [
+    {
+      "name": "is_cpu_op",
+      "boolVal": false
+    }
+  ]
+}{
+  "id": "37",
+  "name": "MLP_Bottom_3_update",
+  "type": "COMP_NODE",
+  "dataDeps": [
+    "20"
+  ],
+  "durationMicros": "16",
+  "attr": [
+    {
+      "name": "is_cpu_op",
+      "boolVal": false
+    }
+  ]
+}{
+  "id": "38",
+  "name": "MLP_Top_0_update",
+  "type": "COMP_NODE",
+  "dataDeps": [
+    "17"
+  ],
+  "durationMicros": "1065",
+  "attr": [
+    {
+      "name": "is_cpu_op",
+      "boolVal": false
+    }
+  ]
+}{
+  "id": "39",
+  "name": "MLP_Top_1_update",
+  "type": "COMP_NODE",
+  "dataDeps": [
+    "14"
+  ],
+  "durationMicros": "524",
+  "attr": [
+    {
+      "name": "is_cpu_op",
+      "boolVal": false
+    }
+  ]
+}{
+  "id": "40",
+  "name": "MLP_Top_2_update",
+  "type": "COMP_NODE",
+  "dataDeps": [
+    "11"
+  ],
+  "durationMicros": "524",
+  "attr": [
+    {
+      "name": "is_cpu_op",
+      "boolVal": false
+    }
+  ]
+}{
+  "id": "41",
+  "name": "iteration_done",
+  "type": "COMP_NODE",
+  "dataDeps": [
+    "33",
+    "34",
+    "35",
+    "36",
+    "37",
+    "38",
+    "39",
+    "40"
+  ],
+  "durationMicros": "1",
+  "attr": [
+    {
+      "name": "is_cpu_op",
+      "boolVal": false
+    }
+  ]
+}
