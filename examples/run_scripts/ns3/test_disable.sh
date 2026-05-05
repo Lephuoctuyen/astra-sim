@@ -6,12 +6,10 @@ SCRIPT_DIR=$(dirname "$(realpath $0)")
 ASTRA_SIM_DIR="${SCRIPT_DIR:?}"/../../..
 EXAMPLES_DIR="${ASTRA_SIM_DIR:?}"/examples
 NS3_DIR="${ASTRA_SIM_DIR:?}"/extern/network_backend/ns-3
-
-WORKLOAD="${EXAMPLES_DIR:?}"/workload/microbenchmarks/all_reduce/16npus_1MB/all_reduce
-SYSTEM="${EXAMPLES_DIR:?}"/system/native_collectives/system.json
-NETWORK="${NS3_DIR:?}"/scratch/config/config.txt
-LOGICAL_TOPOLOGY="${EXAMPLES_DIR:?}"/network/ns3/sample_16nodes_1D.json
-
+WORKLOAD="${EXAMPLES_DIR:?}"/workload/DLRM_HybridParallel/DLRM_HybridParallel
+SYSTEM="${EXAMPLES_DIR:?}/system/native_collectives/system.json"
+NETWORK="${NS3_DIR:?}"/scratch/config/config_disable.txt
+LOGICAL_TOPOLOGY="${EXAMPLES_DIR:?}"/network/ns3/sample_128nodes_1D.json
 MEMORY="${EXAMPLES_DIR:?}"/remote_memory/analytical/no_memory_expansion.json
 COMM_GROUP_CONFIGURATION="empty"
 

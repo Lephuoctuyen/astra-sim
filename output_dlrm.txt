@@ -2,244 +2,243 @@
 version: 
 
 === Node #0 ===
-id: 1056
 name: COMP_NODE_Embedding_FWD
 type: 4
-duration_micros: 300
+duration_micros: 360
 
 === Node #1 ===
-id: 1057
+id: 1
 name: COMM_COLL_NODE_Embedding_ALLTOALL
 type: 7
-data_deps: [1056]
+data_deps: [0]
 attributes:
   - comm_type: 6
-  - comm_size: 98304
+  - comm_size: 134217728
 
 === Node #2 ===
-id: 1058
+id: 2
 name: COMP_NODE_MLP_Bottom_0_FWD
 type: 4
-duration_micros: 1280
-data_deps: [1056]
+duration_micros: 1320
+data_deps: [0]
 
 === Node #3 ===
-id: 1059
+id: 3
 name: COMP_NODE_MLP_Bottom_1_FWD
 type: 4
-duration_micros: 2560
-data_deps: [1058]
+duration_micros: 2600
+data_deps: [2]
 
 === Node #4 ===
-id: 1060
+id: 4
 name: COMP_NODE_MLP_Bottom_2_FWD
 type: 4
-duration_micros: 2560
-data_deps: [1059]
+duration_micros: 2460
+data_deps: [3]
 
 === Node #5 ===
-id: 1061
+id: 5
 name: COMP_NODE_MLP_Bottom_3_FWD
 type: 4
-duration_micros: 800
-data_deps: [1060, 1057]
+duration_micros: 900
+data_deps: [4, 1]
 
 === Node #6 ===
-id: 1062
+id: 6
 name: COMP_NODE_MLP_Top_0_FWD
 type: 4
-duration_micros: 6400
-data_deps: [1061]
+duration_micros: 6520
+data_deps: [5]
 
 === Node #7 ===
-id: 1063
+id: 7
 name: COMP_NODE_MLP_Top_1_FWD
 type: 4
-duration_micros: 2560
-data_deps: [1062]
+duration_micros: 2520
+data_deps: [6]
 
 === Node #8 ===
-id: 1064
+id: 8
 name: COMP_NODE_MLP_Top_2_FWD
 type: 4
-duration_micros: 2560
-data_deps: [1063]
+duration_micros: 2710
+data_deps: [7]
 
 === Node #9 ===
-id: 1065
+id: 9
 name: COMP_NODE_MLP_Top_2_BWD_WG
 type: 4
-duration_micros: 1792
-data_deps: [1064]
+duration_micros: 1880
+data_deps: [8]
 
 === Node #10 ===
-id: 1066
+id: 10
 name: COMM_COLL_NODE_MLP_Top_2_ALLREDUCE
 type: 7
-data_deps: [1065]
+data_deps: [9]
 attributes:
   - comm_type: 0
-  - comm_size: 524288
+  - comm_size: 536870912
 
 === Node #11 ===
-id: 1067
+id: 11
 name: COMP_NODE_MLP_Top_2_BWD_IG
 type: 4
-duration_micros: 2560
-data_deps: [1065]
+duration_micros: 2410
+data_deps: [9]
 
 === Node #12 ===
-id: 1068
+id: 12
 name: COMP_NODE_MLP_Top_1_BWD_WG
 type: 4
-duration_micros: 1792
-data_deps: [1067]
+duration_micros: 1810
+data_deps: [11]
 
 === Node #13 ===
-id: 1069
+id: 13
 name: COMM_COLL_NODE_MLP_Top_1_ALLREDUCE
 type: 7
-data_deps: [1068]
+data_deps: [12]
 attributes:
   - comm_type: 0
-  - comm_size: 524288
+  - comm_size: 536870912
 
 === Node #14 ===
-id: 1070
+id: 14
 name: COMP_NODE_MLP_Top_1_BWD_IG
 type: 4
-duration_micros: 2560
-data_deps: [1068]
+duration_micros: 2640
+data_deps: [12]
 
 === Node #15 ===
-id: 1071
+id: 15
 name: COMP_NODE_MLP_Top_0_BWD_WG
 type: 4
-duration_micros: 4480
-data_deps: [1070]
+duration_micros: 4540
+data_deps: [14]
 
 === Node #16 ===
-id: 1072
+id: 16
 name: COMM_COLL_NODE_MLP_Top_0_ALLREDUCE
 type: 7
-data_deps: [1071]
+data_deps: [15]
 attributes:
   - comm_type: 0
-  - comm_size: 1064960
+  - comm_size: 1073741824
 
 === Node #17 ===
-id: 1073
+id: 17
 name: COMP_NODE_MLP_Top_0_BWD_IG
 type: 4
-duration_micros: 6400
-data_deps: [1071]
+duration_micros: 6220
+data_deps: [15]
 
 === Node #18 ===
-id: 1074
+id: 18
 name: COMM_COLL_NODE_Embedding_ALLTOALL
 type: 7
-data_deps: [1073]
+data_deps: [17]
 attributes:
   - comm_type: 6
-  - comm_size: 98304
+  - comm_size: 134217728
 
 === Node #19 ===
-id: 1075
+id: 19
 name: COMP_NODE_MLP_Bottom_3_BWD_WG
 type: 4
-duration_micros: 800
-data_deps: [1073]
+duration_micros: 820
+data_deps: [17]
 
 === Node #20 ===
-id: 1076
+id: 20
 name: COMM_COLL_NODE_MLP_Bottom_3_ALLREDUCE
 type: 7
-data_deps: [1075]
+data_deps: [19]
 attributes:
   - comm_type: 0
-  - comm_size: 16384
+  - comm_size: 67108864
 
 === Node #21 ===
-id: 1077
+id: 21
 name: COMP_NODE_MLP_Bottom_3_BWD_IG
 type: 4
-duration_micros: 1280
-data_deps: [1075]
+duration_micros: 1160
+data_deps: [19]
 
 === Node #22 ===
-id: 1078
+id: 22
 name: COMP_NODE_MLP_Bottom_2_BWD_WG
 type: 4
-duration_micros: 1792
-data_deps: [1077]
+duration_micros: 1750
+data_deps: [21]
 
 === Node #23 ===
-id: 1079
+id: 23
 name: COMM_COLL_NODE_MLP_Bottom_2_ALLREDUCE
 type: 7
-data_deps: [1078]
+data_deps: [22]
 attributes:
   - comm_type: 0
-  - comm_size: 524288
+  - comm_size: 536870912
 
 === Node #24 ===
-id: 1080
+id: 24
 name: COMP_NODE_MLP_Bottom_2_BWD_IG
 type: 4
-duration_micros: 2560
-data_deps: [1078]
+duration_micros: 2630
+data_deps: [22]
 
 === Node #25 ===
-id: 1081
+id: 25
 name: COMP_NODE_MLP_Bottom_1_BWD_WG
 type: 4
-duration_micros: 1792
-data_deps: [1080]
+duration_micros: 1820
+data_deps: [24]
 
 === Node #26 ===
-id: 1082
+id: 26
 name: COMM_COLL_NODE_MLP_Bottom_1_ALLREDUCE
 type: 7
-data_deps: [1081]
+data_deps: [25]
 attributes:
   - comm_type: 0
-  - comm_size: 524288
+  - comm_size: 536870912
 
 === Node #27 ===
-id: 1083
+id: 27
 name: COMP_NODE_MLP_Bottom_1_BWD_IG
 type: 4
-duration_micros: 2560
-data_deps: [1081]
+duration_micros: 2480
+data_deps: [25]
 
 === Node #28 ===
-id: 1084
+id: 28
 name: COMP_NODE_MLP_Bottom_0_BWD_WG
 type: 4
-duration_micros: 896
-data_deps: [1083]
+duration_micros: 920
+data_deps: [27]
 
 === Node #29 ===
-id: 1085
+id: 29
 name: COMM_COLL_NODE_MLP_Bottom_0_ALLREDUCE
 type: 7
-data_deps: [1084]
+data_deps: [28]
 attributes:
   - comm_type: 0
-  - comm_size: 13312
+  - comm_size: 67108864
 
 === Node #30 ===
-id: 1086
+id: 30
 name: COMP_NODE_MLP_Bottom_0_BWD_IG
 type: 4
-duration_micros: 794
-data_deps: [1084]
+duration_micros: 820
+data_deps: [28]
 
 === Node #31 ===
-id: 1087
+id: 31
 name: COMP_NODE_Embedding_BWD_WG
 type: 4
-duration_micros: 300
-data_deps: [1086, 1074]
+duration_micros: 320
+data_deps: [30, 18]
 
 Đọc xong 32 node.
